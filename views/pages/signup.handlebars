@@ -1,0 +1,41 @@
+{{> navbar}}
+{{#if error}}
+<p> {{etext}} </p>
+{{/if}}
+<h2>Make an Account</h2>
+<form class="signup" id="signup-form" action="/signup" method="post" enctype="multipart/form-data">
+
+    <label> Enter an email:
+        <input type="email" name="username" id="username">
+    </label>
+    <br>
+    <br>
+    <label> Enter a first name:
+        <input type="text" name="firstname" id="firstname">
+    </label>
+    <br>
+    <br>
+    <label> Enter a last name:
+        <input type="text" name="lastname" id="lastname">
+    </label>
+    <br>
+    <br>
+    <label> Please enter a password: 
+        <input type="password" name="password1" id="password1" minlength="8" required maxlength="15" required>
+        <ul class='signup-reqs'>
+            <li>Minimum of 8 character</li>
+            <li>Maximum of 15 characters</li>
+        </ul>
+    </label>
+    <label> Confirm password:
+        <input type="password" name="password2" id="password2">
+    </label>
+    <br>
+    <br>
+    <label> Choose profile picture:
+        <input type="file" name="file">
+    </label>
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
