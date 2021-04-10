@@ -1,10 +1,9 @@
 {
-  "name": "videogame",
+  "name": "cs-duolingo",
   "version": "1.0.0",
-  "description": "Video game project",
+  "description": "CS DuolingoProject",
   "main": "app.js",
   "scripts": {
-    "seed": "node ./tasks/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
