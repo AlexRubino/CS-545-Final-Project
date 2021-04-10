@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "Tehreem, Matthew, Tarquin",
+  "author": "Matthew, Alex, James, Quinn, Michael",
   "license": "ISC",
   "dependencies": {
     "bad-words": "3.0.3",
