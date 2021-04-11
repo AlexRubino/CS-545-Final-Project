@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>CS Duolingo</title>
-        <link rel="stylesheet" href='../../../public/css/style.css'>
-        <link rel="icon" href="../../images/4.jpg">
-        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5ebb77b0998e190012c8ce82&product=inline-share-buttons" async="async"></script>
-    </head>
-    <body>
-        <article class='header'>
-            <h1>Welcome to CS Duolingo!</h1>
-            <p>The best place to learn about computer science for students like you!</p>
-        </article>
-        <main>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <title>CS Duolingo</title>
+      <link rel="icon" href="/public/img/favicon.ico">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link rel="stylesheet" href="/public/css/style.css">
+
+</head>
+
+<body>
+      <header>
+            <img src="../../public/img/CSDuolingo.png" class="logo" alt="CSDuolingo">
+            <br />
+            <div class="topnav navbar-expand-md">
+                 {{> navbar}}
+
+            </div>
+      </header>
+      <main>
             {{{body}}}
-        </main>
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            <br>
+      </main>
+      <footer>
+            <img src="../../public/img/CSDuolingo.png" class="logo" alt='CSDuolingo'>
+            <br />
+            <div class="bottomnav">
+                  <a href="/"> Home </a>
+                  {{!-- <form action="/search" class="search" method="POST">
+                        <label for="search2">
+                              Search
+                              <input type="text" name="search" id='search2' />
+                        </label>
+                        <button class="btn btn-danger btn-sm" type="submit">Submit</button>
+                  </form> --}}
+            </div>
+            <br>
+            <p>Founders of CS Duolingo: Quinn Corcoran, Matt Dimaculangan, James Lepore, Michael Reilly, and Alex Rubino
+            </p>
+            <br>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="/public/js/validate.js"></script>
+      {{!--
+      <script src="/public/js/sort.js"></script>
+      <script src="/public/js/hide_sold.js"></script> --}}
+     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
-        <script src="/public/js/userEdit.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+
+      <script src="/public/js/ajax.js"></script>
+      <script src="/public/js/userEdit.js"></script>
         <script src="/public/js/submitReview.js"></script>
         <script src="/public/js/navActive.js"></script>
-        <script>
-                let updatePostStats = {
-                    upvote: function (postID){
-                        let curr = $('#likes-count-'+postID).text();
-                        curr = parseInt(curr)+1;
-                        $('#likes-count-'+postID).text(curr.toString());
-                    },
-                    downvote: function (postID){
-                        let curr = $('#dislikes-count-'+postID).text();
-                        curr = parseInt(curr)+1;
-                        $('#dislikes-count-'+postID).text(curr.toString());
-                    }
-                };
+      {{!--
+      <script src="tota11y.min.js"></script> --}}
+</body>
 
-            let actOnPost = function (event) {
-                let postID = event.target.dataset.postId;
-                let action = event.target.className;
-                $.post(window.location.pathname+'/'+action,{rid:postID}, function (res){
-                    if(!res.success) return;
-                    else updatePostStats[action](postID);
-                    location.reload();
-                });
-            }
-        </script>
-    </body>
 </html>
+<!-- <script src="/public/js/userEdit.js"></script>
+        <script src="/public/js/submitReview.js"></script>
+        <script src="/public/js/navActive.js"></script>-->
