@@ -1,388 +1,265 @@
-body{
-	background-color: #616163;
-	padding-left: 2%;
-	padding-right: 2%;
-}
-main{
-	background-color: white;
-}
-
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-	position: relative;
-}
-
-.navsearch{
-	float: right;
-	color: white;
-	margin-top: 30px;
-	font-size: 18pt;
-	margin-right: 5px;
-}
-  
-li {
-	float: left;
-}
-  
-li a {
-	display: block;
-	color: whitesmoke;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 18pt;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-  
-li a:hover {
-	background-color: #9FC490;
-	color: #0F0F0F;
-}
-
-.header{
-	width: 100%;
-	text-align: center;
-	display: block;
-	color: #44FFD2;
-	padding: 1%;
-}
-
-.header h1{
-	color: #44FFD2;
-}
-
-a{
-	text-decoration: none;
-	color: #0F0F0F;
-}
-
-article{
-	display: flex;
-	width: 100%;
-	justify-content: center;
-}
-
-h2,h3{
-	text-align: center;
-	color: #0F0F0F;
-}
-
-h1{
-	text-align: center;
-	color: #0F0F0F;
-	font-size: 50px;
-}
-
-
-
-.gameLink{
-	color:navy;
-}
-.gameLink:hover{
-	color:purple;
-	font-style: oblique;
-}
-
-
-.col-quarter h3{
-	color: black;
-	text-align: left;
-}
-
-div > a{
-	color: black;
-}
-
-div > a:visited{
-	color: black;
-}
-
-@media (min-width: 992px){
-    .myRow{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-		padding-right: 2%;
-		padding-left: 2%;
-		padding-bottom: 2%;
-    }
-}
-
-.active {
-	background-color: #9FC490;
-	color: #0F0F0F;
-}
-
-.game{
-	border: 2px solid gray;
-}
-
-.myRow{
-    padding-right: 2%;
-	padding-left: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-}
-
-.helpful{
-	font-weight: bold;
-	text-align: center;
-	background-color: yellow;
-}
-
-.container {
-	position: relative;
-	width: 50%;
-}
-
-.allGames .container{
-	width: 32%;
-	margin: 10px;
-}
-
-@media (max-width: 1600px){
-	.allGames .container{
-		width: 31%;
-	}
-}
-
-.container:hover .overlay {
-	opacity: .6;
-}
-
-.navpic{
-	width: 94px;
-	height: 94px;
-	margin-right: 5px;
-}
-
-.signup-reqs{
-	color: #0F0F0F;
-	list-style-type: circle;
-	background-color: white;
-}
-
-.signup-reqs li{
-	float: none;
-}
-
-nav{
-	padding: 0;
-	margin-bottom: -4px;
-}
-
-.new-review-form{
-	text-align: center;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-#rating{
-	border: groove;
-}
-
-#review{
-	border: groove;
-}
-
-button{
-	border: none;
-	border-radius: 12px;
-	background-color: #0F0F0F;
-	color: whitesmoke;
-	cursor: pointer;
-}
-
-.new-review-submit{
-	font-size: 16px;
-}
-
-.new-review-submit:hover{
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-label{
-	font-weight: bold;
-	font-size: 14pt;
-}
-
-.login-button{
-	font-size: 18pt;
-}
-
-.signup{
-	text-align: center;
-	font-size: 18pt;
-}
-
-.loginform{
-	text-align: center;
-}
-
-.allGames{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.allGames img{
-	height: 250px;
-}
-
-.allGames h2{
-	margin: 10pt;
-}
-
-.overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color:lightgray;
-}
-
-.rid{
-	visibility: hidden;
-}
-
-.text {
-	font-size: 20px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-
-.searchbar{
-	text-align: center;
-	padding-top: 2%;
-}
-
-.searchbar label{
-	color: #0F0F0F;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.searchbar form{
-	display: inline;
-
-}
-
-.searchbar button{
-	font-size: 14pt;
-	border-radius: 0;
-}
-
-.navsearch button{
-	font-size: 14pt;
-	border-radius: 0;
-	border-style: solid;
-	border-color: #0F0F0F;
-}
-
-*{
+* {
 	box-sizing: border-box;
 }
 
-.image {
-    display: flex;
-    margin-left: auto;
-	margin-right: auto;
+html,
+body {
+	font-size: 14pt;
+	background: #dedede;
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 	max-width: 100%;
-	height: 500px;
-	padding-right: 2%;
+	margin: auto;
 }
 
-.gallery{
-	padding: 0;
+main{
+	margin-top: 3%;
+	margin-left: 3%;
 }
 
-.gallery img{
+header {
+	border-bottom: 1px solid #afafaf;
+	color: white;
+	background: #616163;
+}
+
+h1 {
+	color: #222;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.25;
+
+}
+
+.index, .result {
+	width: 100%;
+	padding-bottom: 1em;
+}
+
+.p-form .full-width-input {
+	max-width: 300px;
 	display: block;
-	padding: 2%;
+	min-height: 3em;
+	margin: 10px 0;
+	width: 50%;
 }
 
-.row{
-	border-bottom: solid;
+label {
+	font-weight: normal;
 }
 
-.row:after{
-	content: "";
-	display: table;
-	clear: both;
+.input-error {
+	border: 1px solid #EE0000;
+	border-radius: 7px;
 }
 
-.reviewRow:after{
-	content: "";
-	display: table;
-	clear: both;
+#incomplete-error, .error {
+	color: #ff0000;
+	margin-bottom: 5px;
 }
 
-.reviewImage{
-	display: flex;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 2%;
-	width: 400px;
+.hidden {
+	display: none;
 }
 
-.reviews{
+.result p {
+	display: inline;
+}
+
+a {
+	color: #0072ee;
+	padding: 8px;
+}
+
+.result a {
+	color: #0072ee;
+	text-decoration: underline;
+	display: block;
+	margin-top: 20px;
+}
+
+.result a:hover {
+	color: darkblue;
+	text-decoration: underline;
+}
+
+.result a:active {
+	color: tomato;
+	text-decoration: underline;
+}
+
+footer {
+	justify-content: center;
+	color: white;
+	background: #616163;
+	border-top: 1px solid #afafaf;
+}
+
+.topnav {
+	background-color: #8d6900;
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	font-size: 17px;
+	height: 100%;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.search {
+	float: right;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+	height: 100%;
+}
+
+.bottomnav {
+	background-color: green;
+	overflow: hidden;
+}
+
+.bottomnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.bottomnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.bottomnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.logo {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+}
+
+.img-container {
+	width: 150px;
+	/* height: 100px; */
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.indiv-img-container {
+	max-width: 300px;
+	/* height: 100px; */
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.item-img {
+	width: 100%;
+	max-height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.sold-overlay {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	opacity: 70%;
+	top: 0;
+	right: 0;
+}
+
+#description {
+	font-size: smaller;
+}
+
+#timer {
+	display: inline;
+}
+
+.blue {
+	color: #0072ee;
+}
+
+.titles {
+	text-decoration: underline;
+}
+
+#bad {
+	color: red;
+}
+
+#good {
+	color: green;
+}
+
+#countdown{
+    font-family: sans-serif;
+    color: white;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+	font-size: 30px;
+
+}
+
+#countdown > div{
+	padding: 20px;
+	border-radius: 24px;
+	border-width: .5px;
+	border-color: rgb(34, 34, 34);
+	border-style: groove ;
+	background: #bf830063;
+	display: inline-block;
+}
+
+.units{
+	font-family: sans-serif;
+	color: white;
+	font-size: 15px
+}
+
+#timeheader{
+	text-align: left;
+}
+
+#item-img{
+	float:left;
+}
+
+.bid-block{
 	text-align: center;
 }
 
-.reviews p{
-	font-size: 14pt;
-	padding-bottom: 2%;
-}
-
-.col-half{
-	float: left;
-	width: 50%;
-	padding: 10px;
-}
-
-.col-quarter {
-	float: left;
-	width: 25%;
-	padding: 20px;
-	border-right: solid;
-}
-
-.profile h2{
-	text-align: left;
-	margin-left: 2%;
-}
-
-.profile button{
-	margin-left: 2%;
-}
-
-.profile img{
-    height: 250px;
-	width: auto;
-	margin: 2%;
-}
-
-.upvote img{
-	height: 25px;
-	width: 25px;
-}
-
-.downvote img{
-	height: 25px;
-	width: 25px;
+.form-group {
+	width: 25%;	
 }
