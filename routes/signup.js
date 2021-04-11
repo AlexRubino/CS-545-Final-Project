@@ -33,11 +33,11 @@ router.post("/", upload.single("file" /* name attribute of <file> element in you
         if (data.password1 === data.password2) {
 
             //     console.log("Checkpoint 2");
-            console.log(data.firstname);
-            console.log(data.lastname);
-            console.log(data.username);
-            console.log(data.password1);
-            console.log(data.password2);
+            //console.log(data.firstname);
+            //console.log(data.lastname);
+            //console.log(data.username);
+            //console.log(data.password1);
+            //console.log(data.password2);
             //     const newUser = await userData.addUser(data.firstname, data.lastname, data.username, data.password1);
             //     console.log("Checkpoint 3");
             //     return res.redirect('/signupsuccess');
