@@ -1,8 +1,8 @@
 # CS Duolingo
 
-This is a group project for CS 545 Human Computer Interaction @ Stevens Institute of Technology
+This is a group project for CS 545 Human Computer Interaction at Stevens Institute of Technology
 
-Group Members: Matthew Dimaculangan, Alex Rubino, James Lepore, Michael Reilly, and Quinn Corcoran
+Group Members: Quinn Corcoran, Matthew Dimaculangan, James Lepore, Michael Reilly, and Alex Rubino
 
 This is a computer science learning application which is written in Node.js and it uses MongoDB that allows authorized users to learn about certain courses in computer science.
 Users can also submit feedback on courses and quizzes. 
@@ -19,7 +19,6 @@ Signing up is pretty simple!
 You need to provide your email address, first name, last name and also create a password.
 After registered as a user, you can review/rate a game or can comment on other reviews in the app.
 You can edit your profile by selecting 'Edit Profile' anytime you want.
-You can also edit the reviews/ratings posted by you.
 
 3: Log in
 
