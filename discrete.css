@@ -1,0 +1,141 @@
+body {
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    margin: 2em;
+    height: 1000px;
+}
+
+.container {
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.subcontainer {
+    width:auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.subsubcontainer {
+    width:45%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 25%;
+    border: 3px solid #666;
+    background-color: #ddd;
+    border-radius: .5em;
+    padding: 10px;
+}
+
+.empty {
+    width:auto;
+    background-color: white;
+}
+
+.submit {
+    width: 18%;
+    align-self: center;
+    background-color: greenyellow;
+    cursor: pointer;
+    text-align: center;
+}
+
+.back_arrow {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    background: red;
+    text-align: center;
+    cursor:pointer;
+}
+.back_arrow:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 20px solid red;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+}
+.back_arrow:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-top: 20px solid red;
+    border-bottom: 20px solid red;
+}
+
+.next_arrow {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    background: green;
+    text-align: center;
+    cursor: pointer;
+    visibility: hidden;
+}
+.next_arrow:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+.next_arrow:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid green;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.box.over {
+    border: 3px dotted blue;
+}
+
+[draggable="true"] {
+    user-select: none;
+    cursor: grab;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}

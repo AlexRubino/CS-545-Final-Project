@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Discrete</title>
+        <link rel="stylesheet" href="discrete.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <div>
+                Logic, or the study of formal reasoning, is a foundation
+                of modern computer science. Logical statements are the 
+                building blocks of logic. A <strong>proposition</strong> is 
+                a logical statement that is either true or false.
+                <br/><br/>
+                Unlike a question or a command, a proposition always must have
+                a well-defined, unambiguous meaning.
+                <br/><br/>
+                Let's start building our logical expertise! Drag the following
+                statements to classify them as "proposition" or "not 
+                proposition."
+            </div>
+
+            <div class='subcontainer'>
+                <div class="subsubcontainer">
+                    <h3>Proposition</h3>
+                    <div draggable="false" id="A" class="box empty"></div>
+                    <div draggable="false" id="B" class="box empty"></div>
+                    <div draggable="false" id="C" class="box empty"></div>
+                </div>
+                <div class="subsubcontainer">
+                    <h3>Not Proposition</h3>
+                    <div draggable="false" id="D" class="box empty"></div>
+                    <div draggable="false" id="E" class="box empty"></div>
+                    <div draggable="false" id="F" class="box empty"></div>
+                </div>
+            </div>
+            <br/>
+            <div class="subcontainer">
+                <div draggable="true" class="box">What time is it?</div>
+                <div draggable="true" class="box">There are 7 continents.</div>
+                <div draggable="true" class="box">10 is a prime number.</div>
+                <div draggable="true" class="box">Shut the door.</div>
+                <div draggable="true" class="box">Monday will be cloudy.</div>
+                <div draggable="true" class="box">Have a nice day.</div>            
+            </div>
+            <br/>
+            <div class="subcontainer">
+                <div onclick="back()" class="back_arrow">Back</div>
+                <div onclick="submit()" class="box submit">Submit</div>
+                <div onclick="next()" class="next_arrow">Next</div>
+            </div>
+            
+            <div id="message"></div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <p id='modal-text'></p>
+                <p onclick="next()" class="next_arrow">Next</p>
+                <p>Click outside this window to dismiss</p>
+            </div>
+        </div>
+
+        <script src="discrete.js"></script>
+    </body>
+</html>
