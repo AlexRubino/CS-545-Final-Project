@@ -1,14 +1,16 @@
 body {
     font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
     margin: 2em;
-    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    width:auto;
+    width:900px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .subcontainer {
@@ -18,103 +20,112 @@ body {
     flex-wrap: wrap;
 }
 
+.itemcontainer {
+    width:900px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#background {
+    background-image: url("images/kitchen.jpg");
+    background-size: cover;
+    height: 725px;
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.img-container img {
+    width: 350px;
+}
+
+.img-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
 .subsubcontainer {
     width:45%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subsubcontainer div {
+    margin-bottom: 10px;
 }
 
 .box {
-    width: 25%;
+    width: 75px;
+    height: 75px;
     border: 3px solid #666;
-    background-color: #ddd;
+    background-color: white;
     border-radius: .5em;
     padding: 10px;
+    position: relative;
+    text-align: center;  
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.box img{
+    width: 75px;
+}
+
+.box p{
+    background-color: rgba(256,256,256,.75);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .empty {
-    width:auto;
+    width:75px;
     background-color: white;
 }
 
 .submit {
     width: 18%;
+    height: auto;
     align-self: center;
-    background-color: greenyellow;
+    background-color: lightskyblue;
     cursor: pointer;
     text-align: center;
 }
 
 .back_arrow {
-    width: 100px;
-    height: 40px;
-    position: relative;
-    background: red;
+    width: 18%;
+    height: auto;
+    align-self: center;
+    background-color: lightsalmon;
+    cursor: pointer;
     text-align: center;
-    cursor:pointer;
-}
-.back_arrow:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-right: 20px solid red;
-    border-top: 20px solid white;
-    border-bottom: 20px solid white;
-}
-.back_arrow:before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-right: 20px solid transparent;
-    border-top: 20px solid red;
-    border-bottom: 20px solid red;
 }
 
 .next_arrow {
-    width: 100px;
-    height: 40px;
-    position: relative;
-    background: green;
-    text-align: center;
+    width: 18%;
+    height: auto;
+    align-self: center;
+    background-color: lightgreen;
     cursor: pointer;
+    text-align: center;
     visibility: hidden;
 }
-.next_arrow:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid white;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-}
-.next_arrow:before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid green;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-}
 
-.box.over {
-    border: 3px dotted blue;
-}
-
-[draggable="true"] {
-    user-select: none;
+[draggable="true"] {  
     cursor: grab;
 }
 
@@ -131,11 +142,23 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    position: relative;
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 700px; 
+    border-radius: 25px;
+}
+
+.modal-content p {
+    margin-left: 30px;
+}
+
+#italian {
+    position: absolute;
+    height: 300px;
+    top:50px;
+    right: 0;
 }

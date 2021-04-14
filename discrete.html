@@ -18,50 +18,75 @@
                 a well-defined, unambiguous meaning.
                 <br/><br/>
                 Let's start building our logical expertise! Drag the following
-                statements to classify them as "proposition" or "not 
-                proposition."
+                ingredients into the correct bowl based on whether or not the 
+                sentence is a proposition.
             </div>
+            <br/>
+            <div class='container' id='background'>
+                <div class="itemcontainer">
+                    <div draggable="true" class="box">
+                        <img src="images/drumstick.png"/>
+                        <p>What time is it?</p>
+                    </div>
+                    <div draggable="true" class="box">
+                        <img src="images/apple.png"/>
+                        <p>There are 7 continents.</p>
+                    </div>
+                    <div draggable="true" class="box">
+                        <img src="images/cheese.png"/>
+                        <p>10 is a prime number.</p>
+                    </div>
+                    <div draggable="true" class="box">
+                        <img src="images/carrot.png"/>
+                        <p>Shut the door.</p>
+                    </div>
+                    <div draggable="true" class="box">
+                        <img src="images/steak.png"/>
+                        <p>Monday will be cloudy.</p>
+                    </div>
+                    <div draggable="true" class="box">
+                        <img src="images/mushroom.png"/>
+                        <p>Have a nice day.</p>
+                    </div>         
+                </div>
 
-            <div class='subcontainer'>
-                <div class="subsubcontainer">
-                    <h3>Proposition</h3>
-                    <div draggable="false" id="A" class="box empty"></div>
-                    <div draggable="false" id="B" class="box empty"></div>
-                    <div draggable="false" id="C" class="box empty"></div>
+                <div class="itemcontainer">
+                    <div class="subsubcontainer">
+                        <div draggable="false" id="A" class="box empty"><p></p></div>
+                        <div draggable="false" id="B" class="box empty"><p></p></div>
+                        <div draggable="false" id="C" class="box empty"><p></p></div>
+                        <div class='img-container'>
+                            <img src="images/bowl.png"/>
+                            <h2>Propositions</h3>
+                        </div>
+                    </div>
+                    <div class="subsubcontainer">
+                        <div draggable="false" id="D" class="box empty"><p></p></div>
+                        <div draggable="false" id="E" class="box empty"><p></p></div>
+                        <div draggable="false" id="F" class="box empty"><p></p></div>
+                        <div class='img-container'>
+                            <img src="images/bowl.png"/>
+                            <h2>Not Propositions</h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="subsubcontainer">
-                    <h3>Not Proposition</h3>
-                    <div draggable="false" id="D" class="box empty"></div>
-                    <div draggable="false" id="E" class="box empty"></div>
-                    <div draggable="false" id="F" class="box empty"></div>
+                
+
+                <div class="itemcontainer">
+                    <div onclick="back()" class="box back_arrow">Back</div>
+                    <div onclick="submit()" class="box submit">Submit</div>
+                    <div onclick="next()" class="box next_arrow">Next</div>
                 </div>
             </div>
-            <br/>
-            <div class="subcontainer">
-                <div draggable="true" class="box">What time is it?</div>
-                <div draggable="true" class="box">There are 7 continents.</div>
-                <div draggable="true" class="box">10 is a prime number.</div>
-                <div draggable="true" class="box">Shut the door.</div>
-                <div draggable="true" class="box">Monday will be cloudy.</div>
-                <div draggable="true" class="box">Have a nice day.</div>            
-            </div>
-            <br/>
-            <div class="subcontainer">
-                <div onclick="back()" class="back_arrow">Back</div>
-                <div onclick="submit()" class="box submit">Submit</div>
-                <div onclick="next()" class="next_arrow">Next</div>
-            </div>
-            
-            <div id="message"></div>
         </div>
 
-        <!-- The Modal -->
+        <!-- Modal -->
         <div id="myModal" class="modal">
-            <!-- Modal content -->
             <div class="modal-content">
                 <p id='modal-text'></p>
-                <p onclick="next()" class="next_arrow">Next</p>
+                <p onclick="next()" class="box next_arrow">Next</p>
                 <p>Click outside this window to dismiss</p>
+                <img id='italian' src=""/>
             </div>
         </div>
 
