@@ -1,0 +1,57 @@
+{{> navbar}}
+<section>
+    <img src="../{{game.gameIcon}}" class="reviewImage" alt="{{game.nameOfGame}}"/>
+    <h1>{{game.nameOfGame}}</h1>
+    <h2>{{avgRating}}/10</h2>
+    <h2>Reviews</h2>
+    <form id='new-review' class="new-review-form">
+        <label>Rating: <input type="number" id='rating' max="10" min="1"/></label>
+        <br>
+        <label for="review">Review</label>
+        <br>
+        <textarea id='review' rows="8" cols="30"></textarea>
+        <br>
+        <button class='new-review-submit' type="submit">Submit Review!</button>
+    </form>
+    <br>
+    <div class="reviewRow" id="review-area">
+        {{#each reviews}}
+            <section class="col-quarter">
+                <p class='helpful'>{{this.helpful}}</p>
+                <h3>{{this.author.firstName}} {{this.author.lastName}}</h3>
+                <h3>Rating: {{this.review.rating}}/10 </h3>
+                <h3>Review: {{this.review.userReviews}}</h3>
+                {{#if this.canEdit}}
+                    <form action="/games/{{../url}}/{{this.rid}}/editReview" method="GET">
+                        <button type="submit">Edit Review</button>
+                    </form>
+                    <br>
+                {{/if}}
+                <label>Upvote
+                <button onclick="actOnPost(event);" type="button" data-post-id="{{this.rid}}" class='upvote'><img data-post-id="{{this.rid}}" class="upvote" src="../up.png" alt="upvote"/></button> <span id='likes-count-{{this.rid}}'>{{this.upvotes}}</span> 
+                </label>
+                <label>Downvote 
+                <button type="button" onclick="actOnPost(event);" data-post-id="{{this.rid}}" class="downvote"><img data-post-id="{{this.rid}}" class="downvote" src="../down.png" alt="downvote"/></button> <span id="dislikes-count-{{ this.rid }}">{{this.downvotes}}</span>
+                </label>
+                <br>
+                <br>
+                <div class="sharethis-inline-share-buttons"></div>
+                <h4>Comments</h4>
+                {{#if ../loggedin}}
+                    <form action="/games/{{../url}}/{{this.rid}}/comment" method="POST">
+                        <label><input type="text" name='comment' placeholder="comment..."/></label>
+                        <input type="text" name='rid' value="{{this.rid}}" class='rid'/>
+                        <button type="submit" >Submit Comment</button>
+                    </form>
+                {{/if}}
+                {{#each comments}}
+                    <p>{{this.author.firstName}} {{this.author.lastName}}</p>
+                    <p>{{this.comment}}</p>
+                {{/each}}
+            </section>
+        {{/each}}
+        {{#if author}}
+            {{> review}}
+        {{/if}}
+    </div>
+</section>
