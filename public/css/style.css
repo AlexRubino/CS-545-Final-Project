@@ -158,6 +158,18 @@ footer {
 	color: white;
 }
 
+.coursehome {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #222;
+}
+
+.courselinks {
+	text-align: center;
+	color: #8d6900;
+
+}
+
 .logo {
 	display: block;
   	margin-left: auto;
