@@ -1,0 +1,13 @@
+<div class="topnav navbar-expand-md">
+    <nav>
+        <a href="/">Home</a>
+        {{#if loggedin}}
+        <a href='/user/{{userID}}'>{{currentUser}}</a>
+        <a href="/logout">Log Out</a>
+        {{else}}
+        <a href="/login">Sign In</a>
+        {{/if}}
+        </ul>
+
+    </nav>
+</div>
