@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset="utf-8">
+      <title>CS Duolingo</title>
+      <link rel="stylesheet" href='../../../public/css/style.css'>
+      <link rel="icon" href="../../images/4.jpg">
+      <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=5ebb77b0998e190012c8ce82&product=inline-share-buttons"
+            async="async"></script>
+</head>
+
+<body>
+      <header>
+            <img src="../../public/img/CSDuolingo.png" class="logo" alt="CSDuolingo">
+            <br />
+            {{> navbar}}
+            {{!-- <nav class="navbar navbar-expand-md"> --}}
+      </header>
+      <main>
+            {{{body}}}
+            <br>
+      </main>
+      <footer>
+            <img src="../../public/img/CSDuolingo.png" class="logo" alt='CSDuolingo'>
+            <br />
+            <div class="bottomnav">
+                  <a href="/"> Home </a>
+                  {{!-- <form action="/search" class="search" method="POST">
+                        <label for="search2">
+                              Search
+                              <input type="text" name="search" id='search2' />
+                        </label>
+                        <button class="btn btn-danger btn-sm" type="submit">Submit</button>
+                  </form> --}}
+            </div>
+            <br>
+            <p>Founders of CS Duolingo: Quinn Corcoran, Matt Dimaculangan, James Lepore, Michael Reilly, and Alex Rubino
+            </p>
+            <br>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="/public/js/userEdit.js"></script>
+      <script src="/public/js/navActive.js"></script>
+      <script>
+            let updatePostStats = {
+                  upvote: function (postID) {
+                        let curr = $('#likes-count-' + postID).text();
+                        curr = parseInt(curr) + 1;
+                        $('#likes-count-' + postID).text(curr.toString());
+                  },
+                  downvote: function (postID) {
+                        let curr = $('#dislikes-count-' + postID).text();
+                        curr = parseInt(curr) + 1;
+                        $('#dislikes-count-' + postID).text(curr.toString());
+                  }
+            };
+
+            let actOnPost = function (event) {
+                  let postID = event.target.dataset.postId;
+                  let action = event.target.className;
+                  $.post(window.location.pathname + '/' + action, { rid: postID }, function (res) {
+                        if (!res.success) return;
+                        else updatePostStats[action](postID);
+                        location.reload();
+                  });
+            }
+      </script>
+</body>
+
+</html>
