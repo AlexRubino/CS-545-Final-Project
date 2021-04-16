@@ -167,7 +167,13 @@ footer {
 .courselinks {
 	text-align: center;
 	color: #8d6900;
+}
 
+.errorhome {
+	text-align: center;
+	color: #ff0000;
+	font-size: 1rem;
+	line-height: 1.25;
 }
 
 .logo {

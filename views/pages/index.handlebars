@@ -4,6 +4,9 @@
       </p>
       <hr />
       <div>
+            {{#if error}}
+            <p class="errorhome"> {{etext}} </p>
+            {{/if}}
             <h2 class="coursehome">Courses:</h2>
             <aside>
                   <a href="/hci"><div class="courselinks">Human-Computer Interaction</div></a>
