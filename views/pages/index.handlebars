@@ -1,0 +1,16 @@
+<section>
+      <h1>CS Duolingo</h1>
+      <p id="description">Welcome to CS Duolingo!!! Create an account to start learning from one of our great courses!
+      </p>
+      <hr />
+      <div>
+            {{#if error}}
+            <p class="errorhome"> {{etext}} </p>
+            {{/if}}
+            <h2 class="coursehome">Courses:</h2>
+            <aside>
+                  <a href="/hci"><div class="courselinks">Human-Computer Interaction</div></a>
+                  <a href="/discrete"><div class="courselinks">Discrete Structures</div></a>
+            </aside>
+      </div>
+</section>
