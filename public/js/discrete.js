@@ -29,17 +29,17 @@ function submit(){
           nxts[i].style.visibility = 'visible';
       }
       modal_text.innerHTML = "Well done!";
-      italian.src = "images/chef_goodjob.png";
+      italian.src = "../../public/img/chef_goodjob.png";
       modal.style.display = "block";
   } else{
       modal_text.innerHTML = "Sorry, try again!";
-      italian.src = "images/chef_sad.png";
+      italian.src = "../../public/img/chef_sad.png";
       modal.style.display = "block";
   }
 }
 
 function back(){
-  alert("functionality tbd");
+  window.location.href = ".";
 }
 
 function next(){

@@ -1,0 +1,86 @@
+<section id="discrete">
+    <div class="container">
+        <div>
+            Logic, or the study of formal reasoning, is a foundation
+            of modern computer science. Logical statements are the 
+            building blocks of logic. A <strong>proposition</strong> is 
+            a logical statement that is either true or false.
+            <br/><br/>
+            Unlike a question or a command, a proposition always must have
+            a well-defined, unambiguous meaning.
+            <br/><br/>
+            Let's start testing your logical expertise with a recipe! Drag the following
+            ingredients into the correct bowl based on whether or not the 
+            sentence is a proposition.
+        </div>
+        <br/>
+        <div class='container' id='background'>
+            <div class="itemcontainer">
+                <div draggable="true" class="box">
+                    <img src="../../public/img/drumstick.png"/>
+                    <p>What time is it?</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/apple.png"/>
+                    <p>There are 7 continents.</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/cheese.png"/>
+                    <p>10 is a prime number.</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/carrot.png"/>
+                    <p>Shut the door.</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/steak.png"/>
+                    <p>Monday will be cloudy.</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/mushroom.png"/>
+                    <p>Have a nice day.</p>
+                </div>         
+            </div>
+
+            <div class="itemcontainer">
+                <div class="subsubcontainer">
+                    <div draggable="false" id="A" class="box empty"><p></p></div>
+                    <div draggable="false" id="B" class="box empty"><p></p></div>
+                    <div draggable="false" id="C" class="box empty"><p></p></div>
+                    <div class='img-container'>
+                        <img src="../../public/img/bowl.png"/>
+                        <h2>Propositions</h3>
+                    </div>
+                </div>
+                <div class="subsubcontainer">
+                    <div draggable="false" id="D" class="box empty"><p></p></div>
+                    <div draggable="false" id="E" class="box empty"><p></p></div>
+                    <div draggable="false" id="F" class="box empty"><p></p></div>
+                    <div class='img-container'>
+                        <img src="../../public/img/bowl.png"/>
+                        <h2>Not Propositions</h3>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="itemcontainer">
+                <div onclick="back()" class="box back_arrow">Back</div>
+                <div onclick="submit()" class="box submit">Submit</div>
+                <div onclick="next()" class="box next_arrow">Next</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p id='modal-text'></p>
+            <p onclick="next()" class="box next_arrow">Next</p>
+            <p>Click outside this window to dismiss</p>
+            <img id='italian' src=""/>
+        </div>
+    </div>
+
+    <script src="../../public/js/discrete.js"></script>
+</section>

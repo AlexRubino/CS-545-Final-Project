@@ -1,11 +1,7 @@
-* {
-	box-sizing: border-box;
-}
-
 html,
 body {
 	font-size: 14pt;
-	background: #dedede;
+	background: aliceblue;
 	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 	max-width: 100%;
 	margin: auto;
@@ -19,7 +15,8 @@ main{
 header {
 	border-bottom: 1px solid #afafaf;
 	color: white;
-	background: #616163;
+	background: #00aced;
+	padding-top: 15px;
 }
 
 h1 {
@@ -29,11 +26,6 @@ h1 {
 	font-style: italic;
 }
 
-p {
-	font-size: 1rem;
-	line-height: 1.25;
-
-}
 
 .index, .result {
 	width: 100%;
@@ -46,10 +38,6 @@ p {
 	min-height: 3em;
 	margin: 10px 0;
 	width: 50%;
-}
-
-label {
-	font-weight: normal;
 }
 
 .input-error {
@@ -66,9 +54,6 @@ label {
 	display: none;
 }
 
-.result p {
-	display: inline;
-}
 
 a {
 	color: #0072ee;
@@ -93,14 +78,20 @@ a {
 }
 
 footer {
+    width: 100%;
+    bottom:0;	
 	justify-content: center;
 	color: white;
-	background: #616163;
+	background: #00aced;
 	border-top: 1px solid #afafaf;
 }
 
+footer p{
+	text-align:center;
+}
+
 .topnav {
-	background-color: #8d6900;
+	background-color: #3b5998;
 	overflow: hidden;
 }
 
@@ -124,6 +115,10 @@ footer {
 	color: white;
 }
 
+nav {
+    display:flex;
+	justify-content:space-between;
+}
 .search {
 	float: right;
 	padding: 6px;
@@ -135,8 +130,10 @@ footer {
 }
 
 .bottomnav {
-	background-color: green;
+	background-color: #3b5998;
 	overflow: hidden;
+	display:flex;
+	justify-content:center;
 }
 
 .bottomnav a {
@@ -183,101 +180,31 @@ footer {
   	width: 50%;
 }
 
-.img-container {
-	width: 150px;
-	/* height: 100px; */
-	position: relative;
-	top: 0;
-	left: 0;
+aside {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items: center;
 }
 
-.indiv-img-container {
-	max-width: 300px;
-	/* height: 100px; */
-	position: relative;
-	top: 0;
-	left: 0;
+aside a div{
+	padding:15px;
+	border-radius:50px;
+	background-color: paleturquoise;
+	border: 1px solid black;
+	width: 500px;
 }
 
-.item-img {
-	width: 100%;
-	max-height: 100%;
-	position: relative;
-	top: 0;
-	left: 0;
+.courselinks {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
 }
 
-.sold-overlay {
-	position: absolute;
-	max-width: 100%;
-	max-height: 100%;
-	opacity: 70%;
-	top: 0;
-	right: 0;
+.courselinks progress {
+    margin-top: 15px;
 }
 
-#description {
-	font-size: smaller;
-}
-
-#timer {
-	display: inline;
-}
-
-.blue {
-	color: #0072ee;
-}
-
-.titles {
-	text-decoration: underline;
-}
-
-#bad {
-	color: red;
-}
-
-#good {
-	color: green;
-}
-
-#countdown{
-    font-family: sans-serif;
-    color: white;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-	font-size: 30px;
-
-}
-
-#countdown > div{
-	padding: 20px;
-	border-radius: 24px;
-	border-width: .5px;
-	border-color: rgb(34, 34, 34);
-	border-style: groove ;
-	background: #bf830063;
-	display: inline-block;
-}
-
-.units{
-	font-family: sans-serif;
-	color: white;
-	font-size: 15px
-}
-
-#timeheader{
-	text-align: left;
-}
-
-#item-img{
-	float:left;
-}
-
-.bid-block{
-	text-align: center;
-}
-
-.form-group {
-	width: 25%;	
+.profile img {
+	height: 200px;
 }
