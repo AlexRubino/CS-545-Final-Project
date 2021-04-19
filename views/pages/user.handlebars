@@ -1,0 +1,13 @@
+{{#if error}}
+    <h2>{{etext}}</h2>
+{{else}}
+    <div class="profile">
+     {{!-- <h2>Hey!</h2> --}}
+        <img src="../public/img/{{profilePic}}" class="profile" alt="{{firstName}}"/>
+        <h2 class='profile-text'>{{firstName}} {{lastName}}</h2>
+        <h2 class='profile-text'>{{email}}</h2>
+        <section id="edit">
+            <button class='edit' type="button">Edit Profile</button>
+        </section>
+    </div>
+{{/if}}

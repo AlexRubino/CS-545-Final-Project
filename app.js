@@ -1,24 +1,83 @@
-const express = require('express');
+const express = require("express");
+const session = require('express-session');
 const app = express();
-// const session = require('express-session');
+const configRoutes = require("./routes");
+const Handlebars = require('handlebars');
 const static = express.static(__dirname + '/public');
-// const cookieParser = require('cookie-parser');
-const configRoutes = require('./routes');
 const exphbs = require('express-handlebars');
-require('dotenv').config()
-
 
 app.use('/public', static);
-// app.use(cookieParser());
+app.use(express.static('./images'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+const handlebarsInstance = exphbs.create({
+    defaultLayout: 'main',
+    partialsDir: ['views/partials/']
+});
+
+app.engine('handlebars', handlebarsInstance.engine);
 app.set('view engine', 'handlebars');
+app.use(session({
+  name: 'Test',
+  secret: "This is a secret.. shhh don't tell anyone",
+  resave: false,
+  saveUninitialized: true
+}));
+/*
+app.use('/private', function (req, res, next) {
+  if(!req.session.user){
+      res.status(403);
+      res.render('user',{});
+  }
+  else{
+      next();
+  }
+});
+*/
+//Fixed the unauthenticated user access issue:
+app.use('/user', (req, res, next) => {
+	if (!req.session.user) {
+		//return an HTML page saying that the user is not logged in, and the page must issue an HTTP status code of 403
+		//console.log("Error");
+		return res.status(403).render('pages/login', {
+		error: "User is not logged in."});
+			}	else {
+	//	req.method='GET';
+	console.log("here");
+		next();
+	}
+	
+});
+app.use( function (req, res, next) {
+  time = new Date().toUTCString();
+  if(req.session.user){
+      console.log("[" + time + "] " + req.method + " " + req.originalUrl + " (Authenticated User)");
+  }
+  else{
+      console.log("[" + time + "] " + req.method + " " + req.originalUrl + " (Non-Authenticated User)");
+  }
+  console.log(req.session);
+  next();
+});
+//Added Helper function to remove whitespaces from href
+Handlebars.registerHelper('loud', function (aString) {
+  return aString.replace(/\s/gi,"_");
+});
+//Reference: https://handlebarsjs.com/examples/helper-simple.html
+//Helper function to remove whitespaces from img tag
+Handlebars.registerHelper('rem',function(aIcon){
+  return aIcon.replace(/\s/gi,'');
+});
 
 configRoutes(app);
 
-app.listen(3000, () => {
-      console.log("We've now got a server!");
-      console.log('Your routes will be running on http://localhost:3000');
-});
+try{
+  app.listen(3000, () => {
+    console.log("We've now got a server!");
+    console.log("Your routes will be running on http://localhost:3000");
+  });
+}
+catch(e){
+  console.log(e);
+}

@@ -1,0 +1,210 @@
+html,
+body {
+	font-size: 14pt;
+	background: aliceblue;
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+	max-width: 100%;
+	margin: auto;
+}
+
+main{
+	margin-top: 3%;
+	margin-left: 3%;
+}
+
+header {
+	border-bottom: 1px solid #afafaf;
+	color: white;
+	background: #00aced;
+	padding-top: 15px;
+}
+
+h1 {
+	color: #222;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
+
+.index, .result {
+	width: 100%;
+	padding-bottom: 1em;
+}
+
+.p-form .full-width-input {
+	max-width: 300px;
+	display: block;
+	min-height: 3em;
+	margin: 10px 0;
+	width: 50%;
+}
+
+.input-error {
+	border: 1px solid #EE0000;
+	border-radius: 7px;
+}
+
+#incomplete-error, .error {
+	color: #ff0000;
+	margin-bottom: 5px;
+}
+
+.hidden {
+	display: none;
+}
+
+
+a {
+	color: #0072ee;
+	padding: 8px;
+}
+
+.result a {
+	color: #0072ee;
+	text-decoration: underline;
+	display: block;
+	margin-top: 20px;
+}
+
+.result a:hover {
+	color: darkblue;
+	text-decoration: underline;
+}
+
+.result a:active {
+	color: tomato;
+	text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    bottom:0;	
+	justify-content: center;
+	color: white;
+	background: #00aced;
+	border-top: 1px solid #afafaf;
+}
+
+footer p{
+	text-align:center;
+}
+
+.topnav {
+	background-color: #3b5998;
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	font-size: 17px;
+	height: 100%;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+nav {
+    display:flex;
+	justify-content:space-between;
+}
+.search {
+	float: right;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+	height: 100%;
+}
+
+.bottomnav {
+	background-color: #3b5998;
+	overflow: hidden;
+	display:flex;
+	justify-content:center;
+}
+
+.bottomnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.bottomnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.bottomnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.coursehome {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #222;
+}
+
+.courselinks {
+	text-align: center;
+	color: #8d6900;
+}
+
+.errorhome {
+	text-align: center;
+	color: #ff0000;
+	font-size: 1rem;
+	line-height: 1.25;
+}
+
+.logo {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+}
+
+aside {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items: center;
+}
+
+aside a div{
+	padding:15px;
+	border-radius:50px;
+	background-color: paleturquoise;
+	border: 1px solid black;
+	width: 500px;
+}
+
+.courselinks {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.courselinks progress {
+    margin-top: 15px;
+}
+
+.profile img {
+	height: 200px;
+}
