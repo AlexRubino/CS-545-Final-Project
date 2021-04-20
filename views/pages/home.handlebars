@@ -1,6 +1,7 @@
 <section>
       <h1>CS Duolingo</h1>
-      <p id="description">Welcome to CS Duolingo!!! Create an account to start learning from one of our great courses!
+      <p id="description">Welcome to CS Duolingo!!! {{#unless loggedin}}
+            <a href='/signup'>Create an account</a>to start learning from one of our great courses!{{/unless}}
       </p>
       <hr />
       <div>

@@ -62,7 +62,7 @@ router.post("/", upload.single("file" /* name attribute of <file> element in you
                         try {
                             const newUser = await userData.addUser(data.firstname, data.lastname, data.username, data.password1, newFileName);
                         }
-                        catch {
+                        catch (e) {
                             res.status(401).render('pages/signup', { error: true, etext: "Account already exists on this email" });
                             console.log("You messed up bro");
                             return;
@@ -95,7 +95,7 @@ router.post("/", upload.single("file" /* name attribute of <file> element in you
                 console.log("Checkpoint 10");
 
             }
-            catch {
+            catch (e) {
                 res.status(401).render('pages/signup', { error: true, etext: "Missing Input" });
                 console.log("You messed up bro");
             }
