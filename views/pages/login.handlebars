@@ -1,32 +1,18 @@
-<h1>Login</h1>
-<hr />
-<div id="new-content"></div>
-<div class="form-group">
-      {{#unless enter}}
-      <form id="login-form">
-            <label for="username">Username: <input class="form-control" id="username" type="text"
-                        placeholder="Enter your username here" />
-            </label>
-            <label for="password">Password: <input class="form-control" id="password" type="password"
-                        placeholder="Enter your password here" /></label>
-            <br>
-            <input class="btn btn-primary" type="submit" value="Submit" />
-      </form>
-      {{/unless}}
-</div>
-
-{{#if enter}}
-<p class="enter">Welcome, {{username}}! <a href="/profile" id="blue">Go to My Profile</a></p>
+{{#if error}}
+<p> {{etext}} </p>
 {{/if}}
-
-{{#if hasErrors}}
-<p class="error">You have supplied a wrong username and/or password.</p>
-{{/if}}
-
-{{#if nothing}}
-<p class="error">You must enter a username and password.</p>
-{{/if}}
-
-{{#if unknown}}
-<p class="error">You must log in to view the private page.</p>
-{{/if}}
+<h2>Login</h2>
+<form class='loginform' id = "login-form" action = "/login" method = "post">
+<label> Email
+    <input type="text" name="username" id="username">
+</label>
+<br>
+<br>
+<label> Password
+    <input type="password" name="password" id="password">
+</label>
+<br>
+<br>
+<button class="login-button" type="submit">Login</button>
+</form>
+<p class='signup'>Don't have an account? <a href="/signup">Sign up today! </a></p>
