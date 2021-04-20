@@ -55,14 +55,14 @@ router.post("/", async (req, res) => {
         console.log("You messed up bro");
       }
     }
-    catch{
+    catch (e) {
       res.status(401).render('pages/login', { error: true, etext: "Invalid Email/Password" });
       console.log("You messed up bro");
     }
   }
   catch (e) {
     console.log("Error TBD");
-    res.status(404).render('pages/login', { error: true, etext: "Please provide your email and password"});
+    res.status(404).render('pages/login', { error: true, etext: "Please provide your email and password" });
   }
 });
 
