@@ -202,7 +202,11 @@ aside a div{
 }
 
 .courselinks progress {
-    margin-top: 15px;
+	margin-top: 15px;
+	/* width: 1%;
+	text-align: center;
+	line-height: 13px;
+	color: black; */
 }
 
 .profile img {
