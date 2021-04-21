@@ -81,7 +81,7 @@ footer {
     width: 100%;
     bottom:0;	
 	justify-content: center;
-	color: white;
+	color: black;
 	background: #00aced;
 	border-top: 1px solid #afafaf;
 }
@@ -131,6 +131,7 @@ nav {
 
 .bottomnav {
 	background-color: #3b5998;
+	color: white;
 	overflow: hidden;
 	display:flex;
 	justify-content:center;
@@ -163,7 +164,7 @@ nav {
 
 .courselinks {
 	text-align: center;
-	color: #8d6900;
+	color: darkgreen;
 }
 
 .errorhome {
@@ -211,4 +212,12 @@ aside a div{
 
 .profile img {
 	height: 200px;
+}
+
+.signuplink {
+	color: navy;
+}
+
+.newprofile {
+	color: navy;
 }
