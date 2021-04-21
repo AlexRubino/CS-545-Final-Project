@@ -119,20 +119,36 @@ p {
   align-self: auto;
 }
 
-.search {
-  text-align: center;
+.choices {
+  text-align: vertical;
 }
 #wizard{
   position: absolute;
   left: 550px;
 }
 #fireball{
-  top: 520px;
+  top: 910px;
   left: 630px;
   position:absolute;
 }
 #enemy{
   position:absolute;
   left: 800px;
+}
+
+#label{
+  text-align: left;
+}
+.c1{
+  text-align: center;
+}
+.c2{
+  text-align: center;
+}
+.c3{
+  text-align: center;
+}
+.c4{
+  text-align: center;
 }
 
