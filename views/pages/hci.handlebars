@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Lesson 1</title>
+  <link rel="stylesheet" href="/public/css/hci.css">
+</head>
+
+<body>
+  <header id = "head">
+    <h1>Lesson1</h1>
+  </header>
+  <br>
+  <main class="container">
+    <div class="row">
+      <div>
+        <p><strong>What is computer human interaction?</strong><br>Human-computer interaction (HCI) is a multidisciplinary field of study focusing on the design of computer technology and, in particular, the interaction between humans (the users) and computers. While initially concerned with computers, HCI has since expanded to cover almost all forms of information technology design.</p>
+      </div>
+      <div class="col-sm-6">
+        <form id="HCI" class="computer interaction">
+  <div class="form-content">
+    <label id = "label" for="number">
+      <span id = "question"><strong>question:</strong></span>
+      <br><br>
+        <label id = "a1l" for "a1"></label>
+        <input type="radio" name="answer" id="a1" class="search">
+        <label id = "a2l" for "a2"></label>
+        <input type="radio" name="answer" id="a2" class="search">
+        <label id = "a3l" for "a3"></label>
+        <input type="radio" name="answer" id="a3" class="search">
+        <label id = "a4l" for "a4"></label>
+        <input type="radio" name="answer" id="a4" class="search">
+    </label>
+    <button type='button' id="subans" onclick="subAns()">Submit</button>
+    <br> <br>
+     <footer>    
+      <button type='button' id="nq" onclick="nextq()">Next Question</button>
+      <br><br>
+      <label>Questions right: </label><label id = "counter">0</label><label id="total">/5</label>
+      <br><br>
+      <label id="answer"></label>
+  </footer>
+        <hr>
+        <h1 id="animation"></h1>
+        <img src="../../public/img/HCI/Mage 2/wizard.png" id="wizard">
+        <img src="../../public/img/HCI/Mage 2/fireball_1.png" id="fireball">
+        <img src="../../public/img/HCI/Mage 1/enemy.png" id="enemy">
+        </hr>
+  </div>
+  <div class="form-group hidden" id="error-container">
+    <div class="alert alert-danger text-goes-here">
+    </div>
+  </div>
+  <div class="form-group hidden" id="result-container">
+    <div class="alert alert-success text-goes-here">
+    </div>
+  </div>
+</form>
+      </div>
+    </div>
+    <ul id="items"></ul>
+  </main>
+  <footer class="footer">
+    <br><br>
+  </footer>
+  <script src="/public/js/hci.js"></script>
+</body>
+
+</html>

@@ -24,7 +24,7 @@ router.get('/lesson1', async (req, res) => {
 router.get('/lesson1game', async (req, res) => {
     if (req.session.user) {
       req.session.user.log = true;
-      res.render('pages/hcilesson1game', { loggedin: true, currentUser: req.session.user, userID: req.session.uid});
+      res.render('pages/hci', { loggedin: true, currentUser: req.session.user, userID: req.session.uid});
     }
     else {
       res.status(401).render('pages/index', { error: true, etext: "Cannot Access Courses Without Logging In." });
