@@ -25,12 +25,12 @@ router.get('/:id', async (req, res) => {
         res.status(404).render('pages/user', { flag: true, error: "User not found", userID: req.session.uid, currentUser: req.session.user });
     }
 
-    for (let i = 0; i < user.usersReviews.length; i++) {
-        const rid = user.usersReviews[i];
-        let review = await reviewData.getReview(rid);
-        reviews.push(review);
-    }
-    res.render('pages/user', { flag: false, error: "", loggedin: true, userID: req.session.uid, currentUser: req.session.user, firstName: user.firstName, lastName: user.lastName, email: user.email, posts: reviews, profilePic: user.userProfilePicture });
+    // for (let i = 0; i < user.usersReviews.length; i++) {
+    //     const rid = user.usersReviews[i];
+    //     let review = await reviewData.getReview(rid);
+    //     reviews.push(review);
+    // }
+    res.render('pages/user', { flag: false, error: "", loggedin: true, userID: req.session.uid, currentUser: req.session.user, firstName: user.firstName, lastName: user.lastName, email: user.email, profilePic: user.userProfilePicture });
 });
 
 const upload = multer({

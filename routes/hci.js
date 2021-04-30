@@ -31,6 +31,30 @@ router.get('/lesson1game', async (req, res) => {
     }
 });
 
+//This is for completion of lesson 1 game when the finish button is pressed in hci.handlebars
+router.post('/lesson1game', async (req, res) => {
+  console.log("Test 1");
+  if (req.session.user) {
+    console.log("Test 1.5");
+    req.session.user.log = true;
+    try {
+      console.log("Test 2");
+      const lesson1Completed = await userData.updateProgress(req.session.uid, "hci", 25);
+      console.log("Test 3");
+    }
+    catch (e) {
+      //Should not reach this error
+      console.log("Test 4");
+      console.log(e);
+      res.status(401).render('pages/error', { error: true, etext: "Failed to update lesson 1 game completed on the database" });
+      console.log("You messed up bro");
+      return;
+    }
+    console.log("Test 6");
+    res.render('pages/hcipage', { loggedin: true, currentUser: req.session.user, userID: req.session.uid });
+  }
+});
+
 router.get('/lesson2', async (req, res) => {
     if (req.session.user) {
       req.session.user.log = true;
