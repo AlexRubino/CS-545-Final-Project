@@ -2,72 +2,89 @@
     <div class="container">
         <div>
             Logic, or the study of formal reasoning, is a foundation
-            of modern computer science. Logical statements are the 
-            building blocks of logic. A <strong>proposition</strong> is 
+            of modern computer science. Logical statements are the
+            building blocks of logic. A <strong>proposition</strong> is
             a logical statement that is either true or false.
-            <br/><br/>
+            <br /><br />
             Unlike a question or a command, a proposition always must have
             a well-defined, unambiguous meaning.
-            <br/><br/>
+            <br /><br />
             Let's start testing your logical expertise with a recipe! Drag the following
-            ingredients into the correct bowl based on whether or not the 
+            ingredients into the correct bowl based on whether or not the
             sentence is a proposition.
         </div>
-        <br/>
+        <br />
         <div class='container' id='background'>
             <div class="itemcontainer">
                 <div draggable="true" class="box">
-                    <img src="../../public/img/drumstick.png" alt="drumstick"/>
+                    <img src="../../public/img/drumstick.png" alt="drumstick" />
                     <p>What time is it?</p>
                 </div>
                 <div draggable="true" class="box">
-                    <img src="../../public/img/apple.png" alt="apple"/>
+                    <img src="../../public/img/apple.png" alt="apple" />
                     <p>There are 7 continents.</p>
                 </div>
                 <div draggable="true" class="box">
-                    <img src="../../public/img/cheese.png" alt="cheese"/>
+                    <img src="../../public/img/cheese.png" alt="cheese" />
                     <p>10 is a prime number.</p>
                 </div>
                 <div draggable="true" class="box">
-                    <img src="../../public/img/carrot.png" alt="carrot"/>
+                    <img src="../../public/img/carrot.png" alt="carrot" />
                     <p>Shut the door.</p>
                 </div>
                 <div draggable="true" class="box">
-                    <img src="../../public/img/steak.png" alt="steak"/>
+                    <img src="../../public/img/steak.png" alt="steak" />
                     <p>Monday will be cloudy.</p>
                 </div>
                 <div draggable="true" class="box">
-                    <img src="../../public/img/mushroom.png" alt="mushroom"/>
+                    <img src="../../public/img/mushroom.png" alt="mushroom" />
                     <p>Have a nice day.</p>
-                </div>         
+                </div>
             </div>
 
             <div class="itemcontainer">
                 <div class="subsubcontainer">
-                    <div draggable="false" id="A" class="box empty"><p></p></div>
-                    <div draggable="false" id="B" class="box empty"><p></p></div>
-                    <div draggable="false" id="C" class="box empty"><p></p></div>
+                    <div draggable="false" id="A" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="B" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="C" class="box empty">
+                        <p></p>
+                    </div>
                     <div class='img-container'>
-                        <img src="../../public/img/bowl.png" alt="bowl"/>
+                        <img src="../../public/img/bowl.png" alt="bowl" />
                         <h2>Propositions</h3>
                     </div>
                 </div>
                 <div class="subsubcontainer">
-                    <div draggable="false" id="D" class="box empty"><p></p></div>
-                    <div draggable="false" id="E" class="box empty"><p></p></div>
-                    <div draggable="false" id="F" class="box empty"><p></p></div>
+                    <div draggable="false" id="D" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="E" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="F" class="box empty">
+                        <p></p>
+                    </div>
                     <div class='img-container'>
-                        <img src="../../public/img/bowl.png" alt="bowl"/>
+                        <img src="../../public/img/bowl.png" alt="bowl" />
                         <h2>Not Propositions</h3>
                     </div>
                 </div>
             </div>
-            
+
 
             <div class="itemcontainer">
                 <div onclick="back()" class="box back_arrow">Back</div>
                 <div onclick="submit()" class="box submit">Submit</div>
-                <div onclick="next()" class="box next_arrow">Next</div>
+                <!--<div onclick="next()" class="box next_arrow">Next</div>-->
+                <div class="box next_arrow">
+                    <form action="/discrete/lesson1" method="post">
+                        <button type="submit">Next</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -76,9 +93,11 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <p id='modal-text'></p>
-            <p onclick="next()" class="box next_arrow">Next</p>
+            <form action="/discrete/lesson1" method="post">
+                <button type="submit">Next</button>
+            </form>
             <p>Click outside this window to dismiss</p>
-            <img id='italian' src=""/>
+            <img id='italian' src="" />
         </div>
     </div>
 
