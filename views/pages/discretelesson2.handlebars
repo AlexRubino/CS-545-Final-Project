@@ -1,6 +1,104 @@
-<article>
-      <h1>Human-Computer Interaction</h1>
-      <section>
-            <hr />
-            <h2 class="titles">Lesson 2</h2>
-</article>
+<section id="discrete">
+    <div class="container">
+        <div>
+            This is lesson 2. Wahoo!
+            <p>
+                  Let's see if you can work out some compound proposition recipes. Sort the ingredients based on their truth values given that
+                  <ul>
+                        <li>p is true</li>
+                        <li>q is true</li>
+                        <li>r is false</li>
+                  </ul>
+            </p>
+        </div>
+        <div class='container' id='background'>
+            <div class="itemcontainer">
+                <div draggable="true" class="box">
+                    <img src="../../public/img/drumstick.png" alt="drumstick" />
+                    <p>p ∨ ¬q</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/apple.png" alt="apple" />
+                    <p>¬r ∧ p</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/cheese.png" alt="cheese" />
+                    <p>¬¬r</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/carrot.png" alt="carrot" />
+                    <p>¬(p ∧ ¬r)</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/steak.png" alt="steak" />
+                    <p>p ∨ r</p>
+                </div>
+                <div draggable="true" class="box">
+                    <img src="../../public/img/mushroom.png" alt="mushroom" />
+                    <p>¬(¬p ∨ q)</p>
+                </div>
+            </div>
+
+            <div class="itemcontainer">
+                <div class="subsubcontainer">
+                    <div draggable="false" id="A" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="B" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="C" class="box empty">
+                        <p></p>
+                    </div>
+                    <div class='img-container'>
+                        <img src="../../public/img/bowl.png" alt="bowl" />
+                        <h2>True</h3>
+                    </div>
+                </div>
+                <div class="subsubcontainer">
+                    <div draggable="false" id="D" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="E" class="box empty">
+                        <p></p>
+                    </div>
+                    <div draggable="false" id="F" class="box empty">
+                        <p></p>
+                    </div>
+                    <div class='img-container'>
+                        <img src="../../public/img/bowl.png" alt="bowl" />
+                        <h2>False</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="itemcontainer">
+                <div onclick="back()" class="box back_arrow">Back</div>
+                <div onclick="submit()" class="box submit">Submit</div>
+                <!--<div onclick="next()" class="box next_arrow">Next</div>-->
+                <div class="box next_arrow">
+                    <form action="/discrete/lesson2" method="post">
+                        <button type="submit">Next</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p id='modal-text'></p>
+            <div class="box next_arrow">
+                  <form action="/discrete/lesson2" method="post">
+                        <button type="submit">Next</button>
+                  </form>
+            </div>
+            <p>Click outside this window to dismiss</p>
+            <img id='italian' src="" />
+        </div>
+    </div>
+
+    <script src="../../public/js/discrete.js"></script>
+</section>

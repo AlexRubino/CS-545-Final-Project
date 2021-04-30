@@ -6,6 +6,18 @@
     justify-content: center;
 }
 
+.unclickable {
+    user-select: none;
+    pointer-events: none;
+    opacity: 40%;
+}
+
+#examples {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
 .container {
     width:900px;
     display: flex;
@@ -123,6 +135,23 @@
     cursor: pointer;
     text-align: center;
     visibility: hidden;
+}
+
+.next_arrow form {
+    height: 100%;
+    width: 100%;
+}
+
+.next_arrow form button {
+    height: 100%;
+    width: 100%;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 [draggable="true"] {  

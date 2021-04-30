@@ -236,9 +236,9 @@ async function updateProgress(id, lessontype, newProgress) {
     //  const { ObjectId } = require('mongodb');
     const objId = ObjectId.createFromHexString(id);
     const updatedInfo = await userCollection.updateOne({ _id: objId }, { $set: updateUser });
-    if (updatedInfo.modifiedCount === 0) {
-        throw 'could not update user discrete progress successfully';
-    }
+    // if (updatedInfo.modifiedCount === 0) {
+    //     throw 'could not update user discrete progress successfully';
+    // }
     console.log("updateDiscreteProgress Test 4");
     return await this.getUserById(id);
 }

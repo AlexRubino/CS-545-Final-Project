@@ -8,7 +8,7 @@ function reset_borders(){
 function submit(){
   let result = 1;
   let boxes = [document.getElementById("A"), document.getElementById("B"), document.getElementById("C"), document.getElementById("D"), document.getElementById("E"), document.getElementById("F")];
-  let answerKey = [["There are 7 continents.","10 is a prime number.","Monday will be cloudy."],["What time is it?","Shut the door.","Have a nice day."]];
+  let answerKey = [["There are 7 continents.","10 is a prime number.","Monday will be cloudy.","p ∨ ¬q","¬r ∧ p","p ∨ r"],["What time is it?","Shut the door.","Have a nice day.","¬¬r","¬(p ∧ ¬r)","¬(¬p ∨ q)"]];
 
   for(let i = 0; i < boxes.length; i++){    
       if(((answerKey[0].includes(boxes[i].lastChild.innerHTML)) && (i < 3)) || ((answerKey[1].includes(boxes[i].lastChild.innerHTML)) && (i > 2))){
@@ -47,6 +47,12 @@ function next(){
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
+
+    try{
+      if(document.getElementById("progress").innerHTML == "0") {
+        document.getElementById("lesson2").classList.add("unclickable");
+      }
+    } catch {}
 
     var modal = document.getElementById("myModal");
 
