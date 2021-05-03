@@ -1,6 +1,74 @@
-<article>
-      <h1>Human-Computer Interaction</h1>
-      <section>
-            <hr />
-            <h2 class="titles">Lesson 2 Game</h2>
-</article>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <meta charset="utf-8">
+  <title>Lesson 2</title>
+  <link rel="stylesheet" href="/public/css/hci.css">
+  <header id = "head">
+    <h1 class = "hci1">Lesson 2</h1>
+  </header>
+  <br>
+  <main class="container">
+    <div class="row">
+      <button type='button' id="submit" onclick="submit()">Submit Quiz</button>
+      <div class="col-sm-6">
+        <form id="HCI" class="computer interaction">
+  <div class="form-content">
+    <span id = "question"><strong>question:</strong></span>
+    <label id = "label" for="number" class="hcianswers">
+      <br><br>
+      <div class="c1">
+        <label id = "a1l" for= "a1"></label>
+        <input type="radio" name="answer" id="a1" class="hcichoices">
+        </div>
+      <div class="c2">
+        <label id = "a2l" for= "a2"></label>
+        <input type="radio" name="answer" id="a2" class="hcichoices">
+        </div>
+      <div class="c3">
+        <label id = "a3l" for= "a3"></label>
+        <input type="radio" name="answer" id="a3" class="hcichoices">
+        </div>
+      <div class="c4">
+        <label id = "a4l" for= "a4"></label>
+        <input type="radio" name="answer" id="a4" class="hcichoices">
+      </div> 
+    </label>
+    <button type='button' id="subans" onclick="subAns()">Submit</button>
+    <br> <br>
+     <footer>    
+      <button type='button' id="nq" onclick="nextq()">Next Question</button>
+      <br><br>
+      <label>Questions right: </label><label id = "counter">0</label><label id="total">/5</label>
+      <br><br>
+      <label id="hcianswer"></label>
+  </footer class = "hci footer">
+        <hr>
+        <div class= "animation">
+        <img src="../../public/img/HCI/Mage 2/wizard.png" id="wizard">
+        <img src="../../public/img/HCI/Mage 2/fireball_1.png" id="fireball">
+        <img src="../../public/img/HCI/Mage 1/enemy.png" id="enemy">
+        </div>
+        </hr>
+        
+  </div>
+  <div class="form-group hidden" id="error-container">
+    <div class="alert alert-danger text-goes-here">
+    </div>
+  </div>
+  <div class="form-group hidden" id="result-container">
+    <div class="alert alert-success text-goes-here">
+    </div>
+  </div>
+</form>
+      </div>
+    </div>
+    <ul id="items"></ul>
+  </main>
+  <footer class="footer">
+    <br><br>
+  </footer>
+  <script src="/public/js/hci2.js"></script>
+</body>
+
+</html>

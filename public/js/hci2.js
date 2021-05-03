@@ -14,37 +14,37 @@ let counter = document.getElementById('counter');
 var source = "../../public/img/HCI/Mage 2/";
 var es = "../../public/img/HCI/Mage 1/";
 var count = 1;
-var answerkey = ["form completion", "a higher error rate", "command language", "closure", "card sorting"];
+var answerkey = ["rules", "feature", "an essence", "button", "affect the interaction by hidden meta rules"];
 var wizard = document.getElementById('wizard');
 var fireball = document.getElementById('fireball');
 fireball.style.visibility = "hidden";
 let q1 = {
-    q : "What interaction style shortens learning and reduces key strokes?:",
-    a : ["form completion","natural language","direct manipulation","menu selection"]
+    q : "What determines how a micro interaction works?",
+    a : ["trigger","rules","loops and modes","feedback"]
   };
   
 questions.push(q1);
 let q2 = {
-    q : "What may be a tradeoff of increasing the speed of performance?:",
-    a : ["a higher error rate","increased time to learn","decreased satisfaction","all of the above"]
+    q : "A collection of microinteractions is called a?",
+    a : ["feature","clique","group","highlight"]
   };
 questions.push(q2);
 
 let q3 = {
-  q : "What interaction style relieves the burden of learning the syntax of the application?:",
-  a : ["command language","natural language","direct manipulation","menu selection"]
+  q : "What is the core of a microinteraction called?",
+  a : ["an essence","a spotlight","the focus","the purpose"]
 };
 questions.push(q3);
 
 let q4 = {
-  q : "Which Gestalt law states that we try to make our experiences as complete as possible?:",
-  a : ["closure","proximity","simularity","continuation"]
+  q : "What was the first microinteraction?",
+  a : ["buttons","sound","progress bar","errors"]
 };
 questions.push(q4);
 
 let q5 = {
-  q : "Maeda's SLIP strategy is an excellent guide for dealing with what?:",
-  a : ["card sorting","persona development","statistical analysis","experimental design"]
+  q : "Loops and modes do what for a microinteraction?",
+  a : ["initiate the interaction","determine how they work","illuminates the rules or tells the user how the rules work","affect the interaction by hidden meta rules"]
 };
 questions.push(q5);
 

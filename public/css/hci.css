@@ -15,7 +15,7 @@ header {
   text-align: center;
 }
 
-footer {
+.hcifooter {
   border-top: 1px solid #afafaf;
   text-align: center;
   font-size: 15pt;
@@ -71,40 +71,19 @@ button:hover {
   color: #222;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.hci1
+{
   color: #333;
   margin-bottom: 5px;
 }
 
-h1 {
+.hci1 {
   font-size: 2rem;
 }
 
-h2 {
-  font-size: 1.75rem;
+.animation{
+  position: absolute;
 }
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
-h5 {
-  font-size: 1.15rem;
-}
-
-h6 {
-  font-size: 1.05rem;
-}
-
 p {
   font-size: 1.25rem;
   line-height: 2;
@@ -119,23 +98,28 @@ p {
   align-self: auto;
 }
 
-.choices {
+.hcichoices {
   text-align: vertical;
 }
 #wizard{
-  position: absolute;
-  left: 550px;
+  position: static;
+  width: auto;
+  height: auto;
 }
 #fireball{
-  top: 910px;
-  left: 630px;
-  position:absolute;
+  position: absolute;
+  top: 30px;
 }
 #enemy{
   position:absolute;
-  left: 800px;
+  left: 300px;
+  transform: scaleX(-1);
 }
-
+#health{
+  width: 3%;
+  height: 3%;
+  position: absolute;
+}
 #label{
   text-align: left;
 }
@@ -151,4 +135,5 @@ p {
 .c4{
   text-align: center;
 }
+
 
