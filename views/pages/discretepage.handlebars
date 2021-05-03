@@ -1,11 +1,12 @@
 <section>
-      <h1>Your Progress in Discrete Structures: 0%</h1>
+      <h1>Your Progress in Discrete Structures: <span id="progress">{{discreteProgress}}</span>%</h1>
       </p>
       <hr />
       <div id="discrete_menu">
             <aside>
-                  <a href="/discrete/lesson1"><div class="courselinks">Lesson 1: Propositions</div></a>
-                  <a href="/discrete/lesson2"><div class="courselinks">Lesson 2</div></a>
+                  <a href="/discrete/lesson1" id="lesson1"><div class="courselinks">Lesson 1: Propositions</div></a>
+                  <a href="/discrete/lesson2" id="lesson2"><div class="courselinks">Lesson 2: Compound Propositions</div></a>
+                  <a href="#" class="coming_soon"><div class="courselinks">More lessons coming soon!</div></a>
             </aside>
             <div>
                   <p>
@@ -14,7 +15,8 @@
                        figure out the recipes using knowledge of discrete structures. What's that? 
                        You don't know discrete structures? Not to worry, I will train you with these lessons!
                   </p>
-                  <img src="../../public/img/chef_happy.png"></div>
+                  <img src="../../public/img/chef_happy.png" alt="chef"></div>
             </div>
       </div>
+    <script src="../../public/js/discrete.js"></script>
 </section>
