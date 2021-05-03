@@ -8,6 +8,7 @@ const about = require('./about');
 const help = require('./help');
 const hci = require('./hci');
 const discrete = require('./discrete');
+const tutorial = require('./tutorial');
 
 const constructorMethod = (app) => {
     app.use('/', homeRoute);
@@ -20,6 +21,7 @@ const constructorMethod = (app) => {
     app.use('/help', help);
     app.use('/hci', hci);
     app.use('/discrete', discrete);
+    app.use('/tutorial', tutorial);
 
 
     app.use('*', (req, res) => {
