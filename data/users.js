@@ -243,6 +243,30 @@ async function updateProgress(id, lessontype, newProgress) {
     return await this.getUserById(id);
 }
 
+//The following function will edit the tutorial count on the user.
+//Increment is done in the routes
+async function updateTutorialCount(id, incrememtedCount) {
+    console.log("updateTutorialCount Test 1");
+    if (!id) throw 'Cannot update user without an id';
+    if (!incrememtedCount) throw 'Cannot update user without incrememtedCount';
+    console.log("updateTutorialCount Test 2");
+    const userCollection = await users();
+    let updateUser = {
+        tutorialCount: incrememtedCount,
+    };
+    console.log(updateUser);
+    console.log("updateTutorialCount Test 3");
+
+    //  const { ObjectId } = require('mongodb');
+    const objId = ObjectId.createFromHexString(id);
+    const updatedInfo = await userCollection.updateOne({ _id: objId }, { $set: updateUser });
+    // if (updatedInfo.modifiedCount === 0) {
+    //     throw 'could not update user discrete progress successfully';
+    // }
+    console.log("updateTutorialCount Test 4");
+    return await this.getUserById(id);
+}
+
 //The following function will add reviews to user
 async function addReviewsToUser(email, reviewId) {
     const userCollection = await users();
@@ -267,4 +291,4 @@ async function addCommentsToUser(email, commentId) {
     return userComment;
 }
 
-module.exports = { addUser, getAllUsers, getUser, getUserById, addUserSeed, updateUser, updateProgress, addReviewsToUser, addCommentsToUser };
+module.exports = { addUser, getAllUsers, getUser, getUserById, addUserSeed, updateUser, updateProgress, updateTutorialCount, addReviewsToUser, addCommentsToUser };
