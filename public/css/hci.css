@@ -99,10 +99,6 @@ button:hover {
 .animation{
   position: absolute;
 }
-p {
-  font-size: 1.25rem;
-  line-height: 2;
-}
 
 .post {
   width: 75%;
