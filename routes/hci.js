@@ -55,7 +55,7 @@ router.post('/lesson1', async (req, res) => {
       return;
     }
     console.log("Test 6");
-    res.redirect('/hci');
+    res.redirect('/hci/lesson1game');
   }
 });
 
@@ -79,7 +79,7 @@ router.post('/lesson1game', async (req, res) => {
       return;
     }
     console.log("Test 6");
-    res.redirect('/hci');
+    res.redirect('/hci/lesson2');
   }
 });
 
@@ -123,7 +123,7 @@ router.post('/lesson2', async (req, res) => {
       return;
     }
     console.log("Test 6");
-    res.redirect('/hci');
+    res.redirect('/hci/lesson2game');
   }
 });
 
