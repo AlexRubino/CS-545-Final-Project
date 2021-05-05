@@ -21,6 +21,11 @@ header {
   font-size: 15pt;
 }
 
+.next_arrow{
+  bottom: 0;
+  right: 0
+}
+
 form {
   text-align: center;
 }
@@ -75,10 +80,28 @@ button:hover {
 {
   color: #333;
   margin-bottom: 5px;
+  font-size: 2rem;
+}
+.questions_footer{
+  background: #fefefe;
+  background-image: linear-gradient(to right, rgba(154, 196, 231, 0.459) , lightblue);
 }
 
-.hci1 {
-  font-size: 2rem;
+#head{
+  background: #fefefe;
+  background-image: linear-gradient(to right, rgba(154, 196, 231, 0.459) , lightblue);
+}
+.hci1{
+  background: #fefefe;
+  background-image: linear-gradient(to right, rgba(154, 196, 231, 0.459) , lightblue);
+}
+.footer{
+  background: #fefefe;
+  background-image: linear-gradient(to right, rgba(154, 196, 231, 0.459) , lightblue);
+}
+.next_arrow{
+  left:800px;
+  top:100px;
 }
 
 .animation{
@@ -102,17 +125,16 @@ p {
   text-align: vertical;
 }
 #wizard{
-  position: static;
-  width: auto;
-  height: auto;
+  position: absolute;
+  left:220px;
 }
 #fireball{
   position: absolute;
-  top: 30px;
+  top: 25px;
 }
 #enemy{
   position:absolute;
-  left: 300px;
+  left: 570px;
   transform: scaleX(-1);
 }
 #health{

@@ -1,6 +1,6 @@
 var questions = [];
 let head = document.getElementById('head');
-document.getElementById('nq').disabled = true;
+document.getElementById('nq').style.visibility = 'hidden';
 document.getElementById('subans').disabled = false;
 var a1l = document.getElementById('a1l');
 var a2l = document.getElementById('a2l');
@@ -86,8 +86,7 @@ function subAns() {
   console.log(a4.checked)
   if (a1.checked && answerkey.includes(a1l.innerText) || a2.checked && answerkey.includes(a2l.innerText) || a3.checked && answerkey.includes(a3l.innerText) || a4.checked && answerkey.includes(a4l.innerText)) {
     attack();
-    head.innerText = "correct";
-    document.getElementById('nq').disabled = false;
+    
     a1.disabled = true;
     a2.disabled = true;
     a3.disabled = true;
@@ -111,9 +110,9 @@ function subAns() {
       a4.disabled = true;
   }
   if (count >= 6) {
-    alert('you won');
+    document.getElementById('nq').style.visibility = 'hidden';
     var nxts = document.getElementsByClassName('next_arrow');
-    for (i = 0; i < nxts.length; i++) {
+    for (let i = 0; i < nxts.length; i++) {
       nxts[i].style.visibility = 'visible';
     }
   }
@@ -121,24 +120,23 @@ function subAns() {
 
 function nextq() {
   genQuestion();
-  head.innerText = 'lesson1';
   a1.disabled = false;
   a2.disabled = false;
   a3.disabled = false;
   a4.disabled = false;
-  document.getElementById('nq').disabled = true;
+  document.getElementById('nq').style.visibility = 'hidden';
   document.getElementById('subans').disabled = false;
 }
 
-var left = 30;
+var left = 250;
 var fireStep = 1;
 var wizStep = 1;
 var enmStep = 1;
 function move_fireball() {
-  if (left >= 295) {
+  if (left >= 570) {
     fireball.style.visibility = "hidden";
     fireStep = 1;
-    left = 30;
+    left = 250;
     damage();
     return;
   }
@@ -169,6 +167,7 @@ function damage() {
   if (enmStep > 3 && count < 6) {
     enemy.src = es + "enemy.png";
     enmStep = 1;
+    document.getElementById('nq').style.visibility = 'visible';
     return;
   }
   if (enmStep > 6)

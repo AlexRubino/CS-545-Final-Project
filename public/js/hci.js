@@ -1,6 +1,6 @@
 var questions = [];
 let head = document.getElementById('head');
-document.getElementById('nq').disabled = true;
+document.getElementById('nq').style.visibility = 'hidden';
 document.getElementById('subans').disabled = false;
 var a1l = document.getElementById('a1l');
 var a2l = document.getElementById('a2l');
@@ -14,37 +14,38 @@ let counter = document.getElementById('counter');
 var source = "../../public/img/HCI/Mage 2/";
 var es = "../../public/img/HCI/Mage 1/";
 var count = 1;
-var answerkey = ["form completion", "a higher error rate", "command language", "closure", "card sorting"];
+var qcount = 2;
+var answerkey = ["Sort", "Label", "Integrate", "Prioritize", "Organization"];
 var wizard = document.getElementById('wizard');
 var fireball = document.getElementById('fireball');
 fireball.style.visibility = "hidden";
 let q1 = {
-  q: "What interaction style shortens learning and reduces key strokes?:",
-  a: ["form completion", "natural language", "direct manipulation", "menu selection"]
+  q: "The S in SLIP stands for:",
+  a: ["Sort", "Style", "Settle", "Solve"]
 };
 
 questions.push(q1);
 let q2 = {
-  q: "What may be a tradeoff of increasing the speed of performance?:",
-  a: ["a higher error rate", "increased time to learn", "decreased satisfaction", "all of the above"]
+  q: "The L in SLIP stands for:",
+  a: ["Label", "Lead", "Learn", "Locate"]
 };
 questions.push(q2);
 
 let q3 = {
-  q: "What interaction style relieves the burden of learning the syntax of the application?:",
-  a: ["command language", "natural language", "direct manipulation", "menu selection"]
+  q: "The I in SLIP stands for:",
+  a: ["Integrate", "Infuse", "Incorporate", "Identify"]
 };
 questions.push(q3);
 
 let q4 = {
-  q: "Which Gestalt law states that we try to make our experiences as complete as possible?:",
-  a: ["closure", "proximity", "simularity", "continuation"]
+  q: "The P in SLIP stands for:",
+  a: ["Prioritize", "Proximity", "Process", "Poll"]
 };
 questions.push(q4);
 
 let q5 = {
-  q: "Maeda's SLIP strategy is an excellent guide for dealing with what?:",
-  a: ["card sorting", "persona development", "statistical analysis", "experimental design"]
+  q: "Maeda's SLIP strategy is part of which law of simplicity?:",
+  a: ["Organization", "Time", "Context ", "Trust"]
 };
 questions.push(q5);
 
@@ -86,20 +87,16 @@ function subAns() {
   console.log(a4.checked)
   if (a1.checked && answerkey.includes(a1l.innerText) || a2.checked && answerkey.includes(a2l.innerText) || a3.checked && answerkey.includes(a3l.innerText) || a4.checked && answerkey.includes(a4l.innerText)) {
     attack();
-    head.innerText = "correct";
-    document.getElementById('nq').disabled = false;
     a1.disabled = true;
     a2.disabled = true;
     a3.disabled = true;
     a4.disabled = true;
-
+    count++;
     a1.checked = false;
     a2.checked = false;
     a3.checked = false;
     a4.checked = false;
     document.getElementById('subans').disabled = true;
-    counter.innerText = count++;
-
   }
   else {
     alert("try again");
@@ -111,9 +108,9 @@ function subAns() {
       a4.disabled = true;
   }
   if (count >= 6) {
-    alert('you won');
+    document.getElementById('nq').style.visibility = 'hidden';
     var nxts = document.getElementsByClassName('next_arrow');
-    for (i = 0; i < nxts.length; i++) {
+    for (let i = 0; i < nxts.length; i++) {
       nxts[i].style.visibility = 'visible';
     }
   }
@@ -121,24 +118,24 @@ function subAns() {
 
 function nextq() {
   genQuestion();
-  head.innerText = 'lesson1';
   a1.disabled = false;
   a2.disabled = false;
   a3.disabled = false;
   a4.disabled = false;
-  document.getElementById('nq').disabled = true;
+  document.getElementById('nq').style.visibility = 'hidden';
   document.getElementById('subans').disabled = false;
+  counter.innerText = qcount++;
 }
 
-var left = 30;
+var left = 250;
 var fireStep = 1;
 var wizStep = 1;
 var enmStep = 1;
 function move_fireball() {
-  if (left >= 295) {
+  if (left >= 570) {
     fireball.style.visibility = "hidden";
     fireStep = 1;
-    left = 30;
+    left = 250;
     damage();
     return;
   }
@@ -169,6 +166,7 @@ function damage() {
   if (enmStep > 3 && count < 6) {
     enemy.src = es + "enemy.png";
     enmStep = 1;
+    document.getElementById('nq').style.visibility = 'visible';
     return;
   }
   if (enmStep > 6)
