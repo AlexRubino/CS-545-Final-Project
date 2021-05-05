@@ -14,37 +14,37 @@ let counter = document.getElementById('counter');
 var source = "../../public/img/HCI/Mage 2/";
 var es = "../../public/img/HCI/Mage 1/";
 var count = 1;
-var answerkey = ["rules", "feature", "an essence", "buttons", "affect the interaction by hidden meta rules"];
+var answerkey = ["rules", "feature", "trigger", "loops and modes", "feedback"];
 var wizard = document.getElementById('wizard');
 var fireball = document.getElementById('fireball');
 fireball.style.visibility = "hidden";
 let q1 = {
   q: "What determines how a micro interaction works?",
-  a: ["trigger", "rules", "loops and modes", "feedback"]
+  a: ["orders", "rules", "regulations", "mandates"]
 };
 
 questions.push(q1);
 let q2 = {
-  q: "A collection of microinteractions is called a?",
+  q: "What is a collection of microinteractions called?",
   a: ["feature", "clique", "group", "highlight"]
 };
 questions.push(q2);
 
 let q3 = {
-  q: "What is the core of a microinteraction called?",
-  a: ["an essence", "a spotlight", "the focus", "the purpose"]
+  q: "What initiates a microinteraction?",
+  a: ["trigger", "prompt", "cause", "spark"]
 };
 questions.push(q3);
 
 let q4 = {
-  q: "What was the first microinteraction?",
-  a: ["buttons", "sound", "progress bar", "errors"]
+  q: "What illuminates the rules?",
+  a: ["feedback", "noise", "answer", "reaction"]
 };
 questions.push(q4);
 
 let q5 = {
-  q: "Loops and modes do what for a microinteraction?",
-  a: ["initiate the interaction", "determine how they work", "illuminates the rules or tells the user how the rules work", "affect the interaction by hidden meta rules"]
+  q: "What are the hidden meta rules that affect the interaction?",
+  a: ["loops and modes", "rings and practices", "conditions and circuits", "nuts and bolts"]
 };
 questions.push(q5);
 
@@ -128,15 +128,15 @@ function nextq() {
   document.getElementById('subans').disabled = false;
 }
 
-var left = 250;
+var left = 180;
 var fireStep = 1;
 var wizStep = 1;
 var enmStep = 1;
 function move_fireball() {
-  if (left >= 570) {
+  if (left >= 500) {
     fireball.style.visibility = "hidden";
     fireStep = 1;
-    left = 250;
+    left = 180;
     damage();
     return;
   }

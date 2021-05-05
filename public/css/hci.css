@@ -126,7 +126,7 @@ p {
 }
 #wizard{
   position: absolute;
-  left:220px;
+  left:150px;
 }
 #fireball{
   position: absolute;
@@ -134,7 +134,7 @@ p {
 }
 #enemy{
   position:absolute;
-  left: 570px;
+  left: 500px;
   transform: scaleX(-1);
 }
 #health{

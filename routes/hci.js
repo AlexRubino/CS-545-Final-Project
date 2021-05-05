@@ -123,7 +123,7 @@ router.post('/lesson2', async (req, res) => {
       return;
     }
     console.log("Test 6");
-    res.redirect('/hci');
+    res.redirect('/hcipage');
   }
 });
 
