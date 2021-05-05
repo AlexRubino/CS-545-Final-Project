@@ -21,10 +21,6 @@ header {
   font-size: 15pt;
 }
 
-.next_arrow{
-  bottom: 0;
-  right: 0
-}
 
 form {
   text-align: center;
@@ -99,10 +95,6 @@ button:hover {
   background: #fefefe;
   background-image: linear-gradient(to right, rgba(154, 196, 231, 0.459) , lightblue);
 }
-.next_arrow{
-  left:800px;
-  top:100px;
-}
 
 .animation{
   position: absolute;
@@ -126,7 +118,7 @@ p {
 }
 #wizard{
   position: absolute;
-  left:150px;
+  left:250px;
 }
 #fireball{
   position: absolute;
@@ -134,7 +126,7 @@ p {
 }
 #enemy{
   position:absolute;
-  left: 500px;
+  left: 570px;
   transform: scaleX(-1);
 }
 #health{

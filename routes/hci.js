@@ -55,7 +55,7 @@ router.post('/lesson1', async (req, res) => {
       return;
     }
     console.log("Test 6");
-    res.redirect('pages/hcipage');
+    res.redirect('/hci');
   }
 });
 
@@ -79,7 +79,7 @@ router.post('/lesson1game', async (req, res) => {
       return;
     }
     console.log("Test 6");
-    res.redirect('pages/hcipage');
+    res.redirect('/hci');
   }
 });
 
@@ -123,11 +123,7 @@ router.post('/lesson2', async (req, res) => {
       return;
     }
     console.log("Test 6");
-<<<<<<< Updated upstream
-    res.redirect('/hcipage');
-=======
-    res.redirect('pages/hcipage');
->>>>>>> Stashed changes
+    res.redirect('/hci');
   }
 });
 
@@ -151,7 +147,7 @@ router.post('/lesson2game', async (req, res) => {
       return;
     }
     console.log("Test 6");
-    res.redirect('pages/hcipage');
+    res.redirect('/hci');
   }
 });
 module.exports = router;

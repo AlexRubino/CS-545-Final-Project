@@ -26,6 +26,9 @@ h1 {
 	font-style: italic;
 }
 
+.signup-reqs {
+	list-style-type: none;
+}
 
 .index, .result {
 	width: 100%;
@@ -225,4 +228,37 @@ aside a div{
 
 .newprofile {
 	color: navy;
+}
+
+#tutorial {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#tutorial div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#tutorial div div {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+#tutorial div img {
+	height: 350px;
+}
+
+#tutorial div div h2 {
+	font-size: 24px;
+}
+
+#gohome {
+	text-align: center;
 }

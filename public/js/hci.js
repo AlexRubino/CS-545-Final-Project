@@ -127,7 +127,7 @@ function nextq() {
   counter.innerText = qcount++;
 }
 
-var left = 250;
+var left = 280;
 var fireStep = 1;
 var wizStep = 1;
 var enmStep = 1;
@@ -135,7 +135,7 @@ function move_fireball() {
   if (left >= 570) {
     fireball.style.visibility = "hidden";
     fireStep = 1;
-    left = 250;
+    left = 280;
     damage();
     return;
   }

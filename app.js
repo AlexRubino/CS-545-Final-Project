@@ -51,7 +51,7 @@ app.use('/user', (req, res, next) => {
 
 });
 app.use(function (req, res, next) {
-  let time = new Date().toUTCString();
+  time = new Date().toUTCString();
   if (req.session.user) {
     console.log("[" + time + "] " + req.method + " " + req.originalUrl + " (Authenticated User)");
   }

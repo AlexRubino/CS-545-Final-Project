@@ -128,15 +128,15 @@ function nextq() {
   document.getElementById('subans').disabled = false;
 }
 
-var left = 180;
+var left = 280;
 var fireStep = 1;
 var wizStep = 1;
 var enmStep = 1;
 function move_fireball() {
-  if (left >= 500) {
+  if (left >= 570) {
     fireball.style.visibility = "hidden";
     fireStep = 1;
-    left = 180;
+    left = 280;
     damage();
     return;
   }

@@ -1,7 +1,7 @@
 <section>
       <h1>CS Duolingo</h1>
       <p id="description">Welcome to CS Duolingo!!! {{#unless loggedin}}
-            <a href='/signup'>Create an account</a>to start learning from one of our great courses!{{/unless}}
+            <a class="signuplink" href='/signup'>Create an account</a>to start learning from one of our great courses!{{/unless}}
       </p>
       <hr />
       <div>
@@ -14,7 +14,7 @@
                         <div class="courselinks">
                               Discrete Structures
                               {{#if loggedin}}
-                              <progress id="file" value="33" max="100">33%</progress>
+                              <progress id="file" value="{{discreteProgress}}" max="100">{{discreteProgress}}%</progress>
                               {{/if}}
                         </div>
                   </a>
@@ -22,7 +22,7 @@
                         <div class="courselinks">
                               Human-Computer Interaction
                               {{#if loggedin}}
-                              <progress id="file" value="66" max="100">66%</progress>
+                              <progress id="file" value="{{hciProgress}}" max="100">{{hciProgress}}%</progress>
                               {{/if}}
                         </div>
                   </a>
